@@ -1,6 +1,7 @@
 import Layout from "../components/layout";
-
+import querystring from 'querystring'
 function IndexPage() {
+
   return (
     <Layout>
       <div className="flex flex-col items-center justify-center">
@@ -13,6 +14,9 @@ function IndexPage() {
         <h2 className="p-3 my-8 text-lg font-bold bg-yellow-400 md:text-2xl">
           Hi! Welcome to your first Next.js site.
         </h2>
+        <a href="http://localhost:8888">
+          <button>Login to spotify</button>
+        </a>
       </div>
     </Layout>
   );
