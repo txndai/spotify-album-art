@@ -1,7 +1,38 @@
 import Layout from "../components/layout";
-import querystring from 'querystring'
-function IndexPage() {
+import { useRouter } from 'next/router'
+import React, {useEffect, Component} from 'react'
 
+// function absoluteUrl(req, setLocalhost) {
+//   var protocol = "http:";
+//   var host = req
+//     ? req.headers["x-forwarded-host"] || req.headers["host"]
+//     : window.location.host;
+//   if (host.indexOf("localhost") > -1) {
+//     if (setLocalhost) host = setLocalhost;
+//     protocol = "http:";
+//   }
+//   return {
+//     protocol: protocol,
+//     host: host,
+//     origin: protocol + "//" + host,
+//   };
+// }
+// function getHashParams() {
+//   var hashParams = {};
+//   var e, r = /([^&;=]+)=?([^&;]*)/g,
+//       q = window.location.hash.substring(1);
+//   e = r.exec(q)
+//   while (e) {
+//      hashParams[e[1]] = decodeURIComponent(e[2]);
+//      e = r.exec(q);
+//   }
+//   return hashParams;
+// }
+
+
+function IndexPage( ) {
+  // const router = useRouter()
+  // console.log(fullUrl)
   return (
     <Layout>
       <div className="flex flex-col items-center justify-center">
@@ -21,5 +52,6 @@ function IndexPage() {
     </Layout>
   );
 }
+
 
 export default IndexPage;
